@@ -1,0 +1,368 @@
+
+
+/*......................................................Loading Screen..................................................*/
+	body {
+		margin: 0 auto;
+		font-family: "Courier New";
+	}
+	#load_screen {
+		width: 100%;
+		height: 100%;
+		background: #f6f6f6;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		overflow: hidden;
+	}
+	#loadframe {
+		background: url('transparentLoading.gif');
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		left: 48%;
+		top: 40%;
+	}
+	#loading_logo {
+		padding-top: 0px;
+		font-size: 40px;
+		color: #1C191A;
+		border: 2px solid #1C191A;
+		width: 70px;
+		height: 50px;
+		padding-left: 3px;
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		line-height: 60px;
+		box-shadow: inset 0px 0px 15px #1C191A;
+		animation: 
+			textpulse linear 1s infinite, 
+			boxpulse linear 1s infinite;
+	}
+	#loading_logo a {
+		text-decoration: none;
+		color: #1C191A;
+	}
+	@keyframes textpulse {
+		0% {font-size:40px;}
+		50% {font-size: 45px;}
+		100% {font-size: 40px;}
+	}
+	@keyframes boxpulse {
+		0% {width: 50px;}
+		50% {width: 55px;}
+		100% {width: 50px;}
+	}
+	img {
+		position: absolute;
+		left: 80%;
+		top: 10%;
+	}
+
+/*.....................................................MENU STYLES.....................................................*/
+	#menu_container {
+		background: url("");
+		background-position: top center;
+		background-size: cover;
+		background-attachment: fixed;
+		display: flex;
+		flex-direction: row;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		font-size: 50px;
+		line-height: 100px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#menu_container.active {
+		opacity: 1; 
+		visibility: visible;
+	}
+	#leftnav {
+		background-color: rgba(255,255,255, 1);
+		width: 50vw;
+	}
+	#rightnav {
+		overflow: hidden;
+		background-color: rgba(0,0,0, 1);
+		z-index: 700;
+		margin-left: 1450px;
+		width: 50vw;
+	}
+	#rightnav.active{
+		margin-left: 0;
+		transition: all .2s ease-in-out;
+	}
+	#closenav {
+		margin: 70px;
+		position: absolute;
+		color: white;
+		
+	}
+	#closenav.active {
+		right: -20px;
+	}
+	#closenav:hover {
+		transition: .4s;
+		transform: rotate(180deg);
+	}
+	#navlogo {
+		font-size: 30px;
+		border: 2px solid black;
+		width: 40px;
+		height: 45px;
+		padding-left: 4px;
+		position: absolute;
+		margin: 80px;
+		padding-top: 0px;
+		line-height: 60px;
+		box-shadow: inset 0px 0px 10px black; 
+		transition: .5s;
+	}
+	#navlogo a {
+		color: black;
+	}
+	#navlogo:hover {
+		box-shadow: 0px 0px 30px black;
+	}
+	.navlist 	{
+		list-style: none;
+		text-align: center;
+	}
+	#leftnav ul {
+		padding-top: 250px;
+	}
+	#rightnav ul {
+		padding-top: 250px;
+	}
+	#leftnav ul a {
+		text-decoration: none;
+		color: black;
+		text-align: center;
+	}
+	#leftnav ul a:hover {
+		text-decoration: line-through;
+	}
+
+	#rightnav ul a {
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+	}
+	#rightnav ul a:hover {
+		text-decoration: line-through;
+	}
+/*......................................................MAIN STYLES.....................................................*/
+		
+	#main_container {
+		background: url("alejandro-escamilla-66211.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+	#menu{
+		/*<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
+		background: url("menu-button-of-three-horizontal-lines.png");
+		background-repeat: no-repeat;
+		height: 20px;
+		width: 34px;
+		position: absolute;
+		right: -20px;
+		margin: 85px;
+		transition: .3s;
+	}
+	#menu:hover {
+		transform: rotate(180deg);
+	}
+	#mainlogo {
+		font-size: 30px;
+		border: 2px solid #374E66;;
+		width: 40px;
+		height: 45px;
+		margin: 80px;
+		position: absolute;
+		text-align: center;
+		line-height: 60px;
+		box-shadow: inset 0px 0px 20px #374E66;
+		padding-left: 3px;
+	}
+
+	#mainlogo:hover {
+		box-shadow: 0px 0px 30px #374E66;
+	}
+	#mainlogo a {
+		text-decoration: none;
+	}
+	.logo a {
+		text-decoration: none;
+		color: #374E66;
+	}
+	#leftside {
+		background: url("");
+		/*background-color: pink;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;*/
+		width: 50vw;
+		height: 100vh;
+
+	}
+	#rightside {
+		background-color: #374E66;
+		opacity: 1;
+		width: 50vw;
+		height: 100vh;
+		margin-left: -1500px;
+		overflow: scroll;
+		padding-right: 12px;
+		font-family: 'Montserrat', sans-serif;
+		line-height: 30px;		
+	}
+	h1{
+		position: relative;
+		left: 40%;
+		top: 40%;
+		color: #374E66;
+	}
+	h3, p, h4, .info_ul {
+		color: white;
+		position: relative;
+		left: 15%;
+		top: 15%;
+		width: 500px; 
+		
+	}
+	h3 {
+		font-weight: 300;
+		text-align: justify;
+	}
+	p{
+		font-weight: 200;
+	}
+	.info_ul {
+		font-size: 15px;
+		}
+	#contactBttn {
+		color: #472a23;
+		position: relative;
+		left: 15%;
+		bottom: 90%;
+		margin-top: 15%;
+	 	width: 200px;
+	 	height: 60px;
+	 	font-size: 16px;
+	 	border:none;
+	}
+	a #contactBttn {
+		text-decoration: none;
+	}
+	#contactBttn:hover {
+		box-shadow: 0px 0px 20px #472a23;
+	}
+	
+	/*......................................................Modal.....................................................*/
+	.modalDialog {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		/*Photo by Teresa Kluge on Unsplash*/
+		background: url('teresa-kluge-250309.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+		z-index: 99999;
+		opacity:0;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+		font-size: 30px;
+		text-align: center;
+	}
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		background-color: rgb(87, 187, 212);
+		opacity: .7; 
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+		margin: 0 auto;
+		padding: 0;
+	}
+	 .close {
+	 	font-family: 'Montserrat', sans-serif;
+	 	color: #FFF;
+	 	line-height: 25px;
+	 	position: absolute;
+	 	right: 20%;
+	 	text-align: center;
+	 	top: 20%;
+	 	width: 30px;
+	 	text-decoration: none;
+	 	font-size: 40px;
+	 	font-weight: 300;
+	 	border-radius: 40%;
+	 	text-shadow: 1px 1px 3px #000;
+	 }
+	 #modalContent {
+	 	padding-top: 15%;
+	 	text-align: center;
+	 }
+	 #modallogo {
+	 	position: absolute;
+	 	left: 45%;
+	 	border: 2px solid black;
+	 	box-shadow: inset 0px 0px 15px #472a23;
+	 	width: 40px;
+	 	height: 45px;
+	 	font-size: 30px;
+		padding-left: 4px;
+		padding-top: 0px;
+		line-height: 60px;
+	 }
+	 #modallogo a {
+	 	text-decoration: none;
+	 	color: black;
+	 	font-size: 25px;
+	 }
+	 #modallogo:hover {
+	 	box-shadow: 0px 0px 20px #472a23;
+	 }
+	 textarea {
+	 	position: absolute;
+	 	top: 50%;
+	 	left: 35%;
+	 	width: 30%;
+	 	height: 100px;
+	 	overflow: scroll;
+	 	border: none;
+	 	font-size: 15px;
+	 }
+	 #submitBttn {
+	 	color: #FFF;
+	 	background-color: #472a23; 
+	 	position: absolute;
+		left: 44%;
+		top: 70%;
+	 	width: 200px;
+	 	height: 60px;
+	 	font-size: 16px;
+	 	border:none;
+	 	opacity: 1; 
+	 }

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projects</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+	<style type="text/css">
+		#main_container {
+			/*Photo by Samuel Zeller on Unsplash*/
+			background: url('');
+			display: inline-flex;
+		}
+		#leftside {
+			background-color: #e8ebf2;
+			flex: 1;
+		}
+		#project_rightside {
+			background: url('');
+			flex: 1;
+			overflow: scroll;
+		}
+		#project_rightside.active {
+			transition: 3s;
+			flex: 2.5;
+		}
+		#project_h1 {
+			color: #472a23;
+		}
+		#project_h1.active {
+			transition: 3s;
+			left: 20%;
+		}
+		#mainlogo {
+			border: 2px solid #472a23;
+			box-shadow: inset 0px 0px 15px #472a23;
+		}
+		#mainlogo a {
+			color: #472a23;
+		}
+		#mainlogo:hover{
+			box-shadow: 0px 0px 20px #472a23;
+		}
+		#project_nav li {
+			list-style: none;
+			display: inline;
+
+		}
+		#project_nav a {
+			text-decoration: none;
+			display: inline;
+			color: #472a23;
+		}
+		#project_nav a:hover {
+			color: #bc2045;
+			text-shadow: 0px 0px 3px #bc2045;
+		}
+		#project_nav a:focus {
+			color: #bc2045;
+			text-shadow: 0px 0px 3px #bc2045;
+		}
+		#project_nav {
+			position: relative;
+			top: 60%;
+			left: 10%;
+		}
+		#project_nav.active {
+			transition: 3s;
+			left: 0%;
+		}
+	
+		.expand {
+			display: flex;
+			flex-direction: column;
+		}
+		.project_hero {
+			width: 100%;
+			height: 105vh;
+			color: rgba(255, 255, 255, 0.8);
+			font-size: 30px;
+			font-weight: 600;
+			padding-left: 5%;
+			padding-top: 10%;
+		}
+		.project_hero.active {
+			transition: 2s;
+			height: 50vh;
+		}
+		.project_body {
+			width: 100%;
+			height: 20%;
+			background-color: #F4EDDA;
+			display: none;
+			transition: .5s;
+		}
+		.project_body.active {	
+			/*transition: 2s;*/
+			/*width: 100%;
+			height: 20%;
+			background-color: blue;
+			padding: 0;
+			margin: 0;*/
+			/*display: block;*/
+			transition: .5s; 
+		}
+		 .project_p{
+			position: static;
+			overflow: scroll;
+			line-height: 40px;
+			padding-top: 5%;
+			padding-left: 10%;
+			padding-right: 10%;
+			padding-bottom: 0;
+			margin: 0;
+			width: 80%;
+			height: 50vh;
+			color: #472a23;
+			font-family: "Optima";
+			font-size: 16px;
+			/*display: none;*/
+			transition: .5s;
+		}
+		.project_p.active{
+			display: block;
+		}
+		#frogger_imgs, #clock_imgs,#calc_imgs {
+			width: 100%;
+			background: url("");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+	</style>
+</head>
+<!-- .............................................Loading Screen...................................................... -->
+<body>		
+	<div id="load_screen">
+		<div id="loading_logo">AODesign</div>
+		<div id="loadframe">
+			<!-- http://www.chimply.com/Generator#classic-spinner,spiral -->
+			<!-- <img src="load.gif"> -->
+		</div>
+	</div>
+<!-- ......................................................Page HTML.................................................. -->
+	<div id="main_container">
+		<div id="leftside">
+			<div id="mainlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<h1 id="project_h1">Projects</h1>
+			<ul id="project_nav" onclick="projectPageSlide()">
+				<li><a href="#expand1">Alarm Clock</a> /</li>
+				<li><a href="#expand2">Frogger Animation</a> /</li>
+				<li><a href="#expand3">Matrix Calculator</a></li>
+			</ul>
+		</div>
+		<div id="project_rightside">
+			<div id="menu" onclick="openNav()"></div>
+			<div id="expand1" class="expand">
+				<div class="project_hero" id="clock_imgs">Alarm Clock Project</div>
+				<div class="project_body">
+					<p class="project_p">
+						Using Microsoft HoloLens, 24,000+ service technicians of Thyssenkrupp will be able to visualize and identify problems with elevators ahead of a job, and have remote, hands-free access to technical and expert information when onsite – all resulting in significant savings in time and stress.
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+			<div id="expand2" class="expand">
+				<div class="project_hero" id="frogger_imgs">Frogger Animation Project</div>
+				<div class="project_body">
+					<p class="project_p">
+						Using Microsoft HoloLens, 24,000+ service technicians of Thyssenkrupp will be able to visualize and identify problems with elevators ahead of a job, and have remote, hands-free access to technical and expert information when onsite – all resulting in significant savings in time and stress.
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					</p>
+				</div>
+			</div>
+			<div id="expand3" class="expand">
+				<div class="project_hero" id="calc_imgs">Matric Calculator Project</div>
+				<div class="project_body">
+					<p class="project_p">
+						Using Microsoft HoloLens, 24,000+ service technicians of Thyssenkrupp will be able to visualize and identify problems with elevators ahead of a job, and have remote, hands-free access to technical and expert information when onsite – all resulting in significant savings in time and stress.
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- ..................................................Menu HTML.................................................. -->
+		
+	<div id="menu_container">
+		<div id="leftnav">
+			<div id="navlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<ul class="navlist">
+				<li><a href="aboutme.html">About Me</a></li>
+				<li><a href="workinfo.html">Work Info</a></li>
+				<li><a href="globalinfo.html">Global Info</a></li>
+			</ul>
+		</div>
+
+		<div id="rightnav">
+			<div id="closenav" onclick="openNav()">X</div>
+			<ul class="navlist">
+				<li><a href="education.html">Education</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+
+// ..............................................Projects Page Screen Transitions.........................................
+		
+		function projectPageSlide(){
+			let images = document.getElementsByClassName("project_hero");
+			let i;
+
+			//to change all image sizes at once create a loop to target each image in the class array
+			for (i = 0; i < images.length; i++){ 
+			    images[i].classList.toggle('active');} //grab idex of each image and toggle to active class
+			
+			//toggle below ids by creating or removing active class 
+			document.getElementById('project_rightside').classList.toggle('active');
+			// document.getElementsByClassName('project_body').classList.toggle('active');
+			// document.getElementsByClassName('project_p').classList.toggle('active');
+			document.getElementById('project_h1').classList.toggle('active');
+			document.getElementById('project_nav').classList.toggle('active');
+
+
+			let body = document.getElementsByClassName("project_body");
+			let oneImg = document.getElementById('frogger_imgs');
+			let j;
+
+			if(oneImg.style.height = "50vh"){
+				//to change all image sizes at once create a loop to target each image in the class array
+				for (j = 0; j < body.length; j++){ 
+			    body[j].style.display = "block";} //grab idex of each image and toggle to active class
+			}else {body[j].style.display = "none";}		
+		}  
+		
+
+// ...........................................Project Page Image Slideshows.............................................
+
+
+		let i = 0; //declare and set index variable
+
+		function incrementNum(){ //create incrementer or counter for slideshow var
+		  i++;
+		}
+
+		function froggerSlideshow(){
+	        let froggerArr = ["frogger1.png","frogger2.png"];  //create array with image urls
+	        let froggerImg = document.getElementById('frogger_imgs'); //grab id of div background you want to change
+	        
+            froggerImg.style.backgroundImage = 'url("' + froggerArr[i]+ '")';  //change background image to current index
+            incrementNum();//increment index or i by one
+            if(i > (froggerArr.length - 1)){i = 0}  //when site reaches end of slideshow reset to 0 index
+            setTimeout(froggerSlideshow,5000);  //setTimeout to rerun function every 8 secs
+	        }
+		        
+		froggerSlideshow();
+
+
+		let j = 0; //declare and set index variable
+
+		function incrementNum2(){ //create incrementer or counter for slideshow var
+		  j++;
+		}
+
+		function calcSlideshow(){
+			let calcArr = ["calc1.png", "calc2.png", "calc3.png"];
+			let calcImg = document.getElementById('calc_imgs');
+
+			calcImg.style.backgroundImage = 'url("' + calcArr[j]+ '")';
+			incrementNum2();
+			if(j > (calcArr.length - 1)){j = 0}
+			setTimeout(calcSlideshow,5000);
+		}
+		calcSlideshow();
+
+		let k = 0; //declare and set index variable
+
+		function incrementNum3(){ //create incrementer or counter for slideshow var
+		  k++;
+		}
+
+		function clockSlideshow() {
+			let clockArr = ["clock1.png", "clock2.png", "clock3.png"];
+			let clockImg = document.getElementById('clock_imgs');
+
+			clockImg.style.backgroundImage = 'url("' + clockArr[k]+ '")';
+			incrementNum3();
+			if(k > (clockArr.length - 1)){k = 0}
+			setTimeout(clockSlideshow,5000);
+		}
+		clockSlideshow();
+	</script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<style type="text/css">
+/*.................................................LOADING PAGE........................................................*/
+		body {
+			font-family: "Courier New";
+			margin: 0;
+			padding: 0;
+		}
+		#load_screen {
+			width: 100%;
+			height: 100%;
+			background: #6CC2D9;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999;
+			overflow: hidden;
+		}
+		#loading_logo {
+			padding-top: 0px;
+			font-size: 40px;
+			color: #1C191A;
+			border: 3px solid #1C191A;
+			width: 50px;
+			height: 45px;
+			position: absolute;
+			top: 50%;
+			left: 40%;
+			line-height: 60px;
+			box-shadow: inset 0px 0px 20px #d2cddd;
+			animation: 
+				textpulse linear .8s infinite, 
+				boxpulse linear .8s infinite;
+		}
+		/*@keyframes textpulse {
+			0% {font-size:40px;}
+			50% {font-size: 45px;}
+			100% {font-size: 40px;}
+		}
+		@keyframes boxpulse {
+			0% {width: 50px;}
+			50% {width: 55px;}
+			100% {width: 50px;}
+		}*/
+		img {
+			position: absolute;
+			left: 80%;
+			top: 10%;
+		}
+
+
+/*......................................................MAIN PAGE...................................................*/
+		body {
+			background: url("white.jpg");
+			font-family: "Courier New";
+			color: #2c2f3e;
+			background-size: cover;
+			background-position: top;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			width: 100vw;
+			height: 100vh;
+			margin: 0 auto;
+		}
+
+		#menu{
+			/*image from https://www.iconfinder.com/icons/134216/hamburger_lines_menu_icon*/
+			background-image: url("icons8-Menu Filled-50.png");
+			height: 20px;
+			width: 34px;
+			position: absolute;
+			right: -20px;
+			margin: 85px;
+			transition: .3s;
+		}
+		#menu:hover {
+			transform: rotate(180deg);
+		}
+		#mainlogo {
+			font-size: 30px;
+			border: 2px solid #2c2f3e;;
+			width: 40px;
+			height: 45px;
+			margin: 80px;
+			position: absolute;
+			text-align: center;
+			line-height: 60px;
+			box-shadow: inset 0px 0px 20px #2c2f3e;
+		}
+		#mainlogo:hover {
+			box-shadow: 0px 0px 20px #2c2f3e;
+		}
+		.logo a {
+			text-decoration: none;
+			color: black;
+		}
+		h1 {
+			position: absolute;
+			font-size: 50px;
+			margin: 300px 20% 200px 25%;
+			overflow:hidden; /* hides content until shown by animation */
+			white-space: nowrap;
+			width: 6ch;
+			animation: lineOneTyping 2s steps(6);
+		}
+			
+		h2 {
+			position: absolute;
+			font-size: 30px;
+			margin: 400px 20% 200px 25%;
+			border-right: 4px #2c2f3e solid; 
+			overflow:hidden;
+			white-space: nowrap;
+			width: 46ch;
+			animation: 
+				lineTwoTyping 8s steps(46),
+				blinkingTwo .75s step-end infinite;
+		}
+
+		/*h1 animation*/
+		/*animations reference https://www.youtube.com/watch?v=pM_Xy-8dpwI*/
+		@keyframes lineOneTyping {
+  			0%{ width: 0ch }
+  			100% { width: 6ch }
+		}
+
+		/*h2 animation*/
+		@keyframes lineTwoTyping {
+		  	0% { width: 0ch }
+		  	50% {width: 0ch}
+		  	100% { width: 46ch }
+		}
+
+		/* The typewriter cursor effect */
+		@keyframes blinkingOne {
+		 	from, to { border-color: #2c2f3e; }
+		 	50% {border: none;}
+		}
+		@keyframes blinkingTwo {
+		 	from, to { border-color: transparent; }
+		 	50% {border-color: #2c2f3e;}
+		}
+		#menu_container {
+			background: url("");
+			background-position: top center;
+			background-size: cover;
+			background-attachment: fixed;
+			display: flex;
+			flex-direction: row;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			font-size: 50px;
+			line-height: 100px;
+			opacity: 1;
+			visibility: hidden;
+			/*z-index: 10;*/
+		}
+		#menu_container.active { 
+			visibility: visible;
+		}
+		#leftnav {
+			background-color: rgba(255,255,255, 1);
+			width: 50vw;]
+		}
+		#rightnav {
+			overflow: hidden;
+			background-color: rgba(0,0,0, 1);
+			z-index: 700;
+			margin-left: 1450px;
+			width: 50vw;
+		}
+		#rightnav.active{
+			margin-left: 0;
+			transition: all .2s ease-in-out;
+		}
+		#closenav {
+			margin: 70px;
+			position: absolute;
+			color: white;
+			transition: .5s;
+		}
+		#closenav.active {
+			right: -20px;
+		}
+		#closenav:hover {
+			transform: rotate(180deg);
+		}
+		#navlogo {
+			font-size: 30px;
+			border: 2px solid black;
+			width: 40px;
+			height: 45px;
+			padding-left: 4px;
+			position: absolute;
+			margin: 80px;
+			padding-top: 0px;
+			line-height: 60px;
+			box-shadow: inset 0px 0px 10px black; 
+			transition: .5s;
+		}
+		#navlogo:hover {
+			box-shadow: 0px 0px 30px black;
+		}
+		.navlist 	{
+			list-style: none;
+			text-align: center;
+		}
+		#leftnav ul {
+			padding-top: 250px;
+		}
+		#rightnav ul {
+			padding-top: 250px;
+		}
+		#leftnav ul a {
+			text-decoration: none;
+			color: black;
+			text-align: center;
+		}
+		#leftnav ul a:hover {
+			text-decoration: line-through;
+		}
+		#rightnav ul a {
+			text-align: center;
+			text-decoration: none;
+			color: #fff;
+		}
+		#rightnav ul a:hover {
+			text-decoration: line-through;
+		}
+	</style>
+
+<!-- .................................................LOAD PAGE JQUERY............................................... -->
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		// script referenced from http://www.javascriptatoms.com/2014/04/create-loading-screen-jquery/
+		$(window).on('load',function() {
+			$('#load_screen').delay(2000).animate({
+				left: 2000
+			}, 700);
+		});
+	</script>
+</head>
+<body>
+<!--- ..............................................LOAD PAGE HTML................................................... -->
+	<div id="load_screen">
+		<div id="loading_logo">AODesign</div>
+		<div id="loadframe">
+			<!-- http://www.chimply.com/Generator#classic-spinner,spiral -->
+			<img src="load.gif">
+		</div>
+	</div>
+
+
+<!-- ...............................................Main Homepage............................................... -->
+	<div id="menu" onclick="openNav()"></div>
+	<div id="mainlogo" class="logo"><a href="index.html">AODesign</a></div>
+		<h1>Hello.</h1>
+		<h2>I am a designing developer under construction.</h2>
+		
+<!-- ..................................................Menu HTML.................................................. -->
+		
+		<div id="menu_container">
+			<div id="leftnav">
+				<div id="navlogo" class="logo"><a href="index.html">AODesign</a></div>
+				<ul class="navlist">
+					<li><a href="aboutme.html">About Me</a></li>
+					<li><a href="workinfo.html">Work Info</a></li>
+					<li><a href="globalinfo.html">Global Info</a></li>
+				</ul>
+			</div>
+
+			<div id="rightnav">
+				<div id="closenav" onclick="openNav()">X</div>
+				<ul class="navlist">
+					<li><a href="education.html">Education</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="contact.html">Contact Me</a></li>
+				</ul>
+			</div>
+		</div>
+
+	<script type="text/javascript">
+		function openNav() {
+			document.getElementById("menu_container").classList.toggle("active");
+			// document.getElementById("leftnav").classList.toggle("active");
+			document.getElementById("rightnav").classList.toggle("active");
+			document.getElementById("closenav").classList.toggle("active");
+		}
+	</script>
+</body>
+</html>

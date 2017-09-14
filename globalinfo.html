@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Global Info</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+	<style type="text/css">
+		#main_container {
+			/*Photo by Andrew Neel on Unsplash*/
+			background: url("andrew-neel-182861.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: left;
+		}
+		#mainlogo {
+			border: 2px solid #2c211b;
+			box-shadow: inset 0px 0px 15px #2c211b;
+		}
+		#mainlogo a {
+			color: #2c211b;
+		}
+		#mainlogo:hover{
+			box-shadow: 0px 0px 20px #2c211b;
+		}
+		#rightside{
+			background-color: #7e5642;
+		}
+		h1 {
+			color: #2c211b;
+		}
+	</style>
+</head>
+<!-- .............................................Loading Screen...................................................... -->
+<body>		
+	<div id="load_screen">
+		<div id="loading_logo">AODesign</div>
+		<div id="loadframe">
+		</div>
+	</div>
+<!-- ......................................................Page HTML.................................................. -->
+	<div id="main_container">
+		<div id="leftside">
+			<div id="mainlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<h1>Global Info</h1>
+		</div>
+		<div id="rightside">
+			<div id="menu" onclick="openNav()"></div>
+			<h4>Colegio Bilingüe Centro De Estudios Delin</h4>
+			<p><span>Santo Domingo, Dominican Republic</span>
+				<ul class="info_ul">
+					<li>Taught 20+ 2nd grade ESL students English, Math, and Science, and coordinated with parents, teachers, and counselors to assess student progress. Casa De Sion Orphanage January 2014 – May 2014 Sololá, Guatemala / MTSU</li> 
+				</ul><br>
+			</p>
+			<h4>Casa De Sion Orphanage</h4>
+			<p><span>Sololá, Guatemala</span>
+				<ul class="info_ul">
+					<li>Trained 5 sales associates in Microsoft/Intel technology, device operation, store merchandising, and managed inventory.</li> 
+					<li>Researched, wrote and produced an interactive and educational touring show to educate children in dental health, hygiene, and anger management.</li>
+				</ul><br>
+			</p>
+		</div>
+	</div>
+<!-- ..................................................Menu HTML.................................................. -->
+		
+	<div id="menu_container">
+		<div id="leftnav">
+			<div id="navlogo" class="logo">AODesign</div>
+			<ul class="navlist">
+				<li><a href="aboutme.html">About Me</a></li>
+				<li><a href="workinfo.html">Work Info</a></li>
+				<li><a href="globalinfo.html">Global Info</a></li>
+			</ul>
+		</div>
+
+		<div id="rightnav">
+			<div id="closenav" onclick="openNav()">X</div>
+			<ul class="navlist">
+				<li><a href="education.html">Education</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

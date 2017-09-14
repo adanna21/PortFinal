@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Me</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+	<style type="text/css">
+		#main_container {
+			/*Photo by Samuel Zeller on Unsplash*/
+			background: url('samuel-zeller-367977.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: left;
+		}
+		#rightside {
+			background-color: #b47c6e;
+		}
+		h1, h3 {
+			color: #472a23;
+		}
+		#mainlogo {
+			border: 2px solid #472a23;
+			box-shadow: inset 0px 0px 15px #472a23;
+		}
+		#mainlogo a, #rightside p a {
+			color: #472a23;
+		}
+		#mainlogo:hover {
+			box-shadow: 0px 0px 25px #472a23;
+		}
+		#icons{
+			position: relative;
+			left: 12%;
+			margin-top: 20%;
+		}
+		#icons img{
+			position: relative;
+			padding-right: 10px;
+		}
+		small {
+			color: white;
+		}
+		
+
+	</style>
+</head>
+<!-- .............................................Loading Screen...................................................... -->
+<body>		
+	<div id="load_screen">
+		<div id="loading_logo">AODesign</div>
+		<div id="loadframe">
+		</div>
+	</div>
+<!-- ......................................................Page HTML.................................................. -->
+	<div id="main_container">
+		<div id="leftside">
+			<div id="mainlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<h1>Contact Me</h1>
+		</div>
+		<div id="rightside">
+			<div id="menu" onclick="openNav()"></div>
+			<p>If you would like to learn more about me or reach out for future collaboration please see my contact info below</p><br>
+			<h3><strong>Adanna Omatu</strong></h3>
+			<p><span>Up and coming Web Developer</span></p>
+			<p>615-268-4487</p>
+			<p><a href="mailto:aomatu@gmail.com">aomatu@gmail.com</a></p><br>		
+			<a href="#openModal"><button id="contactBttn">Feedback</button></a><br><br><br>
+			<table id="icons">
+				<tr>
+					<!-- <a href="https://icons8.com/icon/8831/Facebook Filled"> -->
+					<td><img src="icons8-Facebook Filled-50.png"></td>
+					<!-- <a href="https://icons8.com/icon/8831/LinkedIn Filled"> -->
+					<td><img src="icons8-LinkedIn Filled-50.png"></td>
+					<!-- <a href="https://icons8.com/icon/8831/Instagram-Old-Filled"> -->
+					<td><img src="icons8-Instagram Old Filled-50.png"></td>
+				</tr>
+			</table>
+
+			<div id="openModal" class="modalDialog">
+				<div>
+					<a href="#close" title="Close" class="close">X</a>
+					<div id="modalContent">
+						<div id="modallogo" class="logo"><a href="index.html">AODesign</a></div><br><br><br>
+						How Did You Like The Site?<br> 	 
+						<small>Leave me some feedback.</small>
+						<textarea name="comments" placeholder="Enter Comments Here"></textarea>
+						<a href="#close"><button id="submitBttn">Submit</button></a>
+					</div>
+				</div>
+			</div>
+	</div>
+<!-- ..................................................Menu HTML.................................................. -->
+		
+	<div id="menu_container">
+		<div id="leftnav">
+			<div id="navlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<ul class="navlist">
+				<li><a href="aboutme.html">About Me</a></li>
+				<li><a href="workinfo.html">Work Info</a></li>
+				<li><a href="globalinfo.html">Global Info</a></li>
+			</ul>
+		</div>
+
+		<div id="rightnav">
+			<div id="closenav" onclick="openNav()">X</div>
+			<ul class="navlist">
+				<li><a href="education.html">Education</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Work Info</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+	<style type="text/css">
+		#main_container {
+			/*Photo by Breather on Unsplash*/
+			background: url('breather-163393.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		#rightside {
+			background-color: #2a233b;
+
+		}
+		#mainlogo {
+			border: 2px solid #2a233b;
+		}
+		#mainlogo a{
+			color: #2a233b;
+		}
+		#mainlogo:hover{
+			box-shadow: 0px 0px 25px #2a233b;
+		}
+		h1 {
+			color: #2a233b;
+		}
+		p span {
+			font-weight: 300i;
+			font-size: 15px;
+		}
+		
+	</style>
+</head>
+<!-- .........................................Loading Screen HTML...................................................... -->
+<body>		
+	<div id="load_screen">
+		<div id="loading_logo">AODesign</div>
+		<div id="loadframe">
+		</div>
+	</div>
+<!-- ......................................................Page HTML.................................................. -->
+	<div id="main_container">
+		<div id="leftside">
+			<div id="mainlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<h1>Work Info</h1>
+		</div>
+		<div id="rightside">
+			<div id="menu" onclick="openNav()"></div>
+			<h4>Project Coordinator</h4>
+			<p><span>United Way of NYC</span>
+				<ul class="info_ul">
+					<li>Developing crossfunctional, department-wide managment tools for improving office efficiency using PowerApps.</li> 
+					<li>Creating inter departmental grant managment tools to improve communication using SharePoint Designer, InfoPath,and Sharepoint.</li>
+					<li>Interviewing business users to define project scopes, goals and deliverables then creating detailed project plans that outline project tasks and resources.
+				</ul><br>
+			</p>
+			<h4>Quality Analyst Intern</h4>
+			<p><span>Morgan Stanley, New York, NY</span>
+				<ul class="info_ul">
+					<li>Documented, created and executed test cases in Rolodex while researching QA best practices.</li> 
+					<li>Performed functional, usability, and regression testing on existing test cases.</li>
+					<li>Analyzed backend Database with SQuirreL SQL queries to retrieve clients and interactions.
+				</ul><br>
+			</p>
+			<h4>Channel Sales Representative </h4>
+			<p><span>ActionLink, Murfreesboro, TN</span>
+				<ul class="info_ul">
+					<li>Trained 5 sales associates in Microsoft/Intel technology, device operation, store merchandising, and managed inventory.</li> 
+					<li>Performed functional, usability, and regression testing on existing test cases.</li>
+					<li>Conducted in-store presentations, engaged clients to assess device needs and recommend optimal Microsoft/Intel products.
+				</ul><br>
+			</p>
+		</div>
+	</div>
+
+<!-- ..................................................Menu HTML.................................................. -->
+		
+	<div id="menu_container">
+		<div id="leftnav">
+			<div id="navlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<ul class="navlist">
+				<li><a href="aboutme.html">About Me</a></li>
+				<li><a href="workinfo.html">Work Info</a></li>
+				<li><a href="globalinfo.html">Global Info</a></li>
+			</ul>
+		</div>
+
+		<div id="rightnav">
+			<div id="closenav" onclick="openNav()">X</div>
+			<ul class="navlist">
+				<li><a href="education.html">Education</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
