@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>Projects</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
 	<style type="text/css">
 		#main_container {
 			/*Photo by Samuel Zeller on Unsplash*/
@@ -45,7 +45,7 @@
 		#project_nav li {
 			list-style: none;
 			display: inline;
-
+			font-family: "Montserrat, sans-serif";
 		}
 		#project_nav a {
 			text-decoration: none;
@@ -54,16 +54,16 @@
 		}
 		#project_nav a:hover {
 			color: #bc2045;
-			text-shadow: 0px 0px 3px #bc2045;
+			text-shadow: 0px 0px 1px #bc2045;
 		}
-		#project_nav a:focus {
+		#project_nav a:active{
 			color: #bc2045;
 			text-shadow: 0px 0px 3px #bc2045;
 		}
 		#project_nav {
 			position: relative;
 			top: 60%;
-			left: 10%;
+			left: 20%;
 		}
 		#project_nav.active {
 			transition: 3s;
@@ -77,9 +77,6 @@
 		.project_hero {
 			width: 100%;
 			height: 105vh;
-			color: rgba(255, 255, 255, 0.8);
-			font-size: 30px;
-			font-weight: 600;
 			padding-left: 5%;
 			padding-top: 10%;
 		}
@@ -87,22 +84,21 @@
 			transition: 2s;
 			height: 50vh;
 		}
+		.project_hero a {
+			text-decoration: none;
+			color: rgba(255, 255, 255, 0.8);
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.project_hero a:hover {
+			text-shadow: 0px 0px 20px #FFF;
+		}
 		.project_body {
 			width: 100%;
 			height: 20%;
 			background-color: #F4EDDA;
 			display: none;
 			transition: .5s;
-		}
-		.project_body.active {	
-			/*transition: 2s;*/
-			/*width: 100%;
-			height: 20%;
-			background-color: blue;
-			padding: 0;
-			margin: 0;*/
-			/*display: block;*/
-			transition: .5s; 
 		}
 		 .project_p{
 			position: static;
@@ -116,13 +112,23 @@
 			width: 80%;
 			height: 50vh;
 			color: #472a23;
-			font-family: "Optima";
+			font-family: 'Montserrat', sans-serif;
 			font-size: 16px;
-			/*display: none;*/
 			transition: .5s;
+			font-size: 18px;
+			text-align: justify;
 		}
 		.project_p.active{
 			display: block;
+		}
+		.project_p a {
+			text-decoration: none;
+			color: inherit;
+			font-weight: bold;
+		}
+		.project_p a:hover {
+			font-size: 20px;
+			text-shadow: 0px 0px 1px #bc2045;
 		}
 		#frogger_imgs, #clock_imgs,#calc_imgs {
 			width: 100%;
@@ -145,7 +151,7 @@
 <!-- ......................................................Page HTML.................................................. -->
 	<div id="main_container">
 		<div id="leftside">
-			<div id="mainlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<div id="mainlogo" class="logo"><a href="../index.html">AODesign</a></div>
 			<h1 id="project_h1">Projects</h1>
 			<ul id="project_nav" onclick="projectPageSlide()">
 				<li><a href="#expand1">Alarm Clock</a> /</li>
@@ -156,49 +162,33 @@
 		<div id="project_rightside">
 			<div id="menu" onclick="openNav()"></div>
 			<div id="expand1" class="expand">
-				<div class="project_hero" id="clock_imgs">Alarm Clock Project</div>
+				<div class="project_hero" id="clock_imgs"><a href="http://adanna-clock.bitballoon.com">Alarm Clock Project</a></div>
 				<div class="project_body">
 					<p class="project_p">
-						Using Microsoft HoloLens, 24,000+ service technicians of Thyssenkrupp will be able to visualize and identify problems with elevators ahead of a job, and have remote, hands-free access to technical and expert information when onsite – all resulting in significant savings in time and stress.
+						Project purpose was to create a functional alarm clock utilizing html, css, and javascript. As a fan of syfy my immediate idea revolved around futuristic vs analog clocks. Once the concept was cristilized I proceeded to research futurist digital clocks. The final product was aimed at portarying the feeling on a clock that projected onto surfaces.<br><br>
 
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						The javascript was fairly straight forward. The issue arrose with trying to figure out how to create an option for users to listen to alarm sounds and selected the noise they wanted to heaar. First I needed to assign a value to each option and connect it with the src path of the music files. Then create an object that would play the music on select without an audio tag. &nbsp; <a href="http://adanna-clock.bitballoon.com">Live Demo</a>
 					</p>
 				</div>
 			</div>
 			<div id="expand2" class="expand">
-				<div class="project_hero" id="frogger_imgs">Frogger Animation Project</div>
+				<div class="project_hero" id="frogger_imgs"><a href="http://adanna-animation.bitballoon.com">Frogger Animation Project</a></div>
 				<div class="project_body">
 					<p class="project_p">
-						Using Microsoft HoloLens, 24,000+ service technicians of Thyssenkrupp will be able to visualize and identify problems with elevators ahead of a job, and have remote, hands-free access to technical and expert information when onsite – all resulting in significant savings in time and stress.
+						At Per Scholas we were delving more into using javascript as a tool for creating functional websites. Part of our lesson was animation and how to encorporate that on the web. From that lesson we were given the assignment of using animation to create movement on the web. We were given the craetive freedom to craete whatever we wanted.<br><br>
 
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Each item in the frogger game is animated by incrimenting their margins from left to right in a set interval. The frog is utilizing the key down method to give the user the ability to move in any direction using the arrow keys. &nbsp; <a href="http://adanna-animation.bitballoon.com">Live Demo</a>
 
 					</p>
 				</div>
 			</div>
 			<div id="expand3" class="expand">
-				<div class="project_hero" id="calc_imgs">Matric Calculator Project</div>
+				<div class="project_hero" id="calc_imgs"><a href="http://adanna-matrix-calc.bitballoon.com">Matrix Calculator Project</a></div>
 				<div class="project_body">
 					<p class="project_p">
-						Using Microsoft HoloLens, 24,000+ service technicians of Thyssenkrupp will be able to visualize and identify problems with elevators ahead of a job, and have remote, hands-free access to technical and expert information when onsite – all resulting in significant savings in time and stress.
+						The project scope was to create a functional calculator with javascript. The complication was adding a button that could provide the average of a series of numbers.<br><br>
 
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+						As with most of my projects my ideas stemed from futuristic appearance and the matrix. I modeled the calculator after a the buttons in a pay phone dail in order to emulate the scenes in The Matrix where characters must call an operator to escape The Matrix. When the = button is clicked css elements are changed with javascript to turn the container background into a Matrix gif. When the Call button is clicked css elements are changed once again to revert the backgrounds to normal. &nbsp; <a href="http://adanna-matrix-calc.bitballoon.com">Live Demo</a>
 					</p>
 				</div>
 			</div>
@@ -208,7 +198,7 @@
 		
 	<div id="menu_container">
 		<div id="leftnav">
-			<div id="navlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<div id="navlogo" class="logo"><a href="../index.html">AODesign</a></div>
 			<ul class="navlist">
 				<li><a href="aboutme.html">About Me</a></li>
 				<li><a href="workinfo.html">Work Info</a></li>
@@ -228,34 +218,7 @@
 	<script type="text/javascript">
 
 
-// ..............................................Projects Page Screen Transitions.........................................
-		
-		function projectPageSlide(){
-			let images = document.getElementsByClassName("project_hero");
-			let i;
 
-			//to change all image sizes at once create a loop to target each image in the class array
-			for (i = 0; i < images.length; i++){ 
-			    images[i].classList.toggle('active');} //grab idex of each image and toggle to active class
-			
-			//toggle below ids by creating or removing active class 
-			document.getElementById('project_rightside').classList.toggle('active');
-			// document.getElementsByClassName('project_body').classList.toggle('active');
-			// document.getElementsByClassName('project_p').classList.toggle('active');
-			document.getElementById('project_h1').classList.toggle('active');
-			document.getElementById('project_nav').classList.toggle('active');
-
-
-			let body = document.getElementsByClassName("project_body");
-			let oneImg = document.getElementById('frogger_imgs');
-			let j;
-
-			if(oneImg.style.height = "50vh"){
-				//to change all image sizes at once create a loop to target each image in the class array
-				for (j = 0; j < body.length; j++){ 
-			    body[j].style.display = "block";} //grab idex of each image and toggle to active class
-			}else {body[j].style.display = "none";}		
-		}  
 		
 
 // ...........................................Project Page Image Slideshows.............................................
@@ -268,10 +231,10 @@
 		}
 
 		function froggerSlideshow(){
-	        let froggerArr = ["frogger1.png","frogger2.png"];  //create array with image urls
+	        let froggerArr = ["../images/frogger1.png","../images/frogger2.png"];  //create array with image urls
 	        let froggerImg = document.getElementById('frogger_imgs'); //grab id of div background you want to change
 	        
-            froggerImg.style.backgroundImage = 'url("' + froggerArr[i]+ '")';  //change background image to current index
+            froggerImg.style.backgroundImage = 'url(' + "../images/" + froggerArr[i]+ ')';  //change background image to current index
             incrementNum();//increment index or i by one
             if(i > (froggerArr.length - 1)){i = 0}  //when site reaches end of slideshow reset to 0 index
             setTimeout(froggerSlideshow,5000);  //setTimeout to rerun function every 8 secs
@@ -287,10 +250,10 @@
 		}
 
 		function calcSlideshow(){
-			let calcArr = ["calc1.png", "calc2.png", "calc3.png"];
+			let calcArr = ["../images/calc1.png", "../images/calc2.png", "../images/calc3.png"];
 			let calcImg = document.getElementById('calc_imgs');
 
-			calcImg.style.backgroundImage = 'url("' + calcArr[j]+ '")';
+			calcImg.style.backgroundImage = 'url(' + '../images/' + calcArr[j]+ ')';
 			incrementNum2();
 			if(j > (calcArr.length - 1)){j = 0}
 			setTimeout(calcSlideshow,5000);
@@ -304,10 +267,10 @@
 		}
 
 		function clockSlideshow() {
-			let clockArr = ["clock1.png", "clock2.png", "clock3.png"];
+			let clockArr = ["../images/clock1.png", "../images/clock2.png", "../images/clock3.png"];
 			let clockImg = document.getElementById('clock_imgs');
 
-			clockImg.style.backgroundImage = 'url("' + clockArr[k]+ '")';
+			clockImg.style.backgroundImage = 'url('+ '../images/' + clockArr[k]+ ')';
 			incrementNum3();
 			if(k > (clockArr.length - 1)){k = 0}
 			setTimeout(clockSlideshow,5000);

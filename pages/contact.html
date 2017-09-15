@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>Contact Me</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
 	<style type="text/css">
 		#main_container {
 			/*Photo by Samuel Zeller on Unsplash*/
-			background: url('samuel-zeller-367977.jpg');
+			background: url('../images/samuel-zeller-367977.jpg');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-attachment: fixed;
@@ -39,9 +39,16 @@
 		#icons img{
 			position: relative;
 			padding-right: 10px;
+			opacity: .7;
 		}
 		small {
 			color: white;
+		}
+		p {
+			font-size: 18px;
+		}
+		h3 {
+			font-size: 18px;
 		}
 		
 
@@ -57,12 +64,12 @@
 <!-- ......................................................Page HTML.................................................. -->
 	<div id="main_container">
 		<div id="leftside">
-			<div id="mainlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<div id="mainlogo" class="logo"><a href="../index.html">AODesign</a></div>
 			<h1>Contact Me</h1>
 		</div>
 		<div id="rightside">
 			<div id="menu" onclick="openNav()"></div>
-			<p>If you would like to learn more about me or reach out for future collaboration please see my contact info below</p><br>
+			<p>If you would like to learn more about me or reach out for future collaboration, please see my contact info below:</p><br>
 			<h3><strong>Adanna Omatu</strong></h3>
 			<p><span>Up and coming Web Developer</span></p>
 			<p>615-268-4487</p>
@@ -71,11 +78,11 @@
 			<table id="icons">
 				<tr>
 					<!-- <a href="https://icons8.com/icon/8831/Facebook Filled"> -->
-					<td><img src="icons8-Facebook Filled-50.png"></td>
+					<td><img src="../images/icons8-Facebook Filled-50.png"></td>
 					<!-- <a href="https://icons8.com/icon/8831/LinkedIn Filled"> -->
-					<td><img src="icons8-LinkedIn Filled-50.png"></td>
+					<td><img src="../images/icons8-LinkedIn Filled-50.png"></td>
 					<!-- <a href="https://icons8.com/icon/8831/Instagram-Old-Filled"> -->
-					<td><img src="icons8-Instagram Old Filled-50.png"></td>
+					<td><img src="../images/icons8-Instagram Old Filled-50.png"></td>
 				</tr>
 			</table>
 
@@ -83,11 +90,11 @@
 				<div>
 					<a href="#close" title="Close" class="close">X</a>
 					<div id="modalContent">
-						<div id="modallogo" class="logo"><a href="index.html">AODesign</a></div><br><br><br>
+						<div id="modallogo" class="logo"><a href="../index.html">AODesign</a></div><br><br><br>
 						How Did You Like The Site?<br> 	 
 						<small>Leave me some feedback.</small>
 						<textarea name="comments" placeholder="Enter Comments Here"></textarea>
-						<a href="#close"><button id="submitBttn">Submit</button></a>
+						<a href="#close"><button id="submitBttn" onclick=" alert('Thank you for your feedback!')">Submit</button></a>
 					</div>
 				</div>
 			</div>
@@ -96,7 +103,7 @@
 		
 	<div id="menu_container">
 		<div id="leftnav">
-			<div id="navlogo" class="logo"><a href="index.html">AODesign</a></div>
+			<div id="navlogo" class="logo"><a href="../index.html">AODesign</a></div>
 			<ul class="navlist">
 				<li><a href="aboutme.html">About Me</a></li>
 				<li><a href="workinfo.html">Work Info</a></li>

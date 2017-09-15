@@ -35,16 +35,6 @@
 				textpulse linear .8s infinite, 
 				boxpulse linear .8s infinite;
 		}
-		/*@keyframes textpulse {
-			0% {font-size:40px;}
-			50% {font-size: 45px;}
-			100% {font-size: 40px;}
-		}
-		@keyframes boxpulse {
-			0% {width: 50px;}
-			50% {width: 55px;}
-			100% {width: 50px;}
-		}*/
 		img {
 			position: absolute;
 			left: 80%;
@@ -54,7 +44,7 @@
 
 /*......................................................MAIN PAGE...................................................*/
 		body {
-			background: url("white.jpg");
+			background: url("images/white.jpg");
 			font-family: "Courier New";
 			color: #2c2f3e;
 			background-size: cover;
@@ -68,7 +58,7 @@
 
 		#menu{
 			/*image from https://www.iconfinder.com/icons/134216/hamburger_lines_menu_icon*/
-			background-image: url("icons8-Menu Filled-50.png");
+			background-image: url("images/icons8-Menu Filled-50.png");
 			height: 20px;
 			width: 34px;
 			position: absolute;
@@ -157,7 +147,6 @@
 			line-height: 100px;
 			opacity: 1;
 			visibility: hidden;
-			/*z-index: 10;*/
 		}
 		#menu_container.active { 
 			visibility: visible;
@@ -251,7 +240,7 @@
 		<div id="loading_logo">AODesign</div>
 		<div id="loadframe">
 			<!-- http://www.chimply.com/Generator#classic-spinner,spiral -->
-			<img src="load.gif">
+			<img src="images/load.gif">
 		</div>
 	</div>
 
@@ -268,18 +257,18 @@
 			<div id="leftnav">
 				<div id="navlogo" class="logo"><a href="index.html">AODesign</a></div>
 				<ul class="navlist">
-					<li><a href="aboutme.html">About Me</a></li>
-					<li><a href="workinfo.html">Work Info</a></li>
-					<li><a href="globalinfo.html">Global Info</a></li>
+					<li><a href="pages/aboutme.html">About Me</a></li>
+					<li><a href="pages/workinfo.html">Work Info</a></li>
+					<li><a href="pages/globalinfo.html">Global Info</a></li>
 				</ul>
 			</div>
 
 			<div id="rightnav">
 				<div id="closenav" onclick="openNav()">X</div>
 				<ul class="navlist">
-					<li><a href="education.html">Education</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="contact.html">Contact Me</a></li>
+					<li><a href="pages/education.html">Education</a></li>
+					<li><a href="pages/projects.html">Projects</a></li>
+					<li><a href="pages/contact.html">Contact Me</a></li>
 				</ul>
 			</div>
 		</div>
@@ -287,7 +276,6 @@
 	<script type="text/javascript">
 		function openNav() {
 			document.getElementById("menu_container").classList.toggle("active");
-			// document.getElementById("leftnav").classList.toggle("active");
 			document.getElementById("rightnav").classList.toggle("active");
 			document.getElementById("closenav").classList.toggle("active");
 		}

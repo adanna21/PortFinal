@@ -16,7 +16,7 @@
 		overflow: hidden;
 	}
 	#loadframe {
-		background: url('transparentLoading.gif');
+		background: url('../images/transparentLoading.gif');
 		width: 60px;
 		height: 60px;
 		position: absolute;
@@ -157,7 +157,7 @@
 /*......................................................MAIN STYLES.....................................................*/
 		
 	#main_container {
-		background: url("alejandro-escamilla-66211.jpg");
+		background: url("../images/alejandro-escamilla-66211.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
@@ -172,7 +172,7 @@
 	}
 	#menu{
 		/*<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
-		background: url("menu-button-of-three-horizontal-lines.png");
+		background: url("../images/menu-button-of-three-horizontal-lines.png");
 		background-repeat: no-repeat;
 		height: 20px;
 		width: 34px;
@@ -209,11 +209,6 @@
 	}
 	#leftside {
 		background: url("");
-		/*background-color: pink;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;*/
 		width: 50vw;
 		height: 100vh;
 
@@ -249,9 +244,14 @@
 	}
 	p{
 		font-weight: 200;
+
+	}
+	h4 {
+		font-size: 18px;
 	}
 	.info_ul {
-		font-size: 15px;
+		font-size: 16px;
+		font-weight: 200;
 		}
 	#contactBttn {
 		color: #472a23;
@@ -261,7 +261,7 @@
 		margin-top: 15%;
 	 	width: 200px;
 	 	height: 60px;
-	 	font-size: 16px;
+	 	font-size: 17px;
 	 	border:none;
 	}
 	a #contactBttn {
@@ -279,7 +279,7 @@
 		bottom: 0;
 		left: 0;
 		/*Photo by Teresa Kluge on Unsplash*/
-		background: url('teresa-kluge-250309.jpg');
+		background: url('../images/teresa-kluge-250309.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 100vw;
