@@ -279,20 +279,16 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
-		width: 450px;
+		width: 500px;
 		height: 200px;
 		box-shadow: inset 0px 0px 80px #374E66;
 		float: left;
 		margin: 21% 0 0 15%; 
 		opacity: .7;
-		filter: grayscale(2);
-		/*filter: blur(1px);*/
-		/*filter: sepia(100%);*/
-		/*filter: contrast(1.4) saturate(1.8) sepia(.6);*/
-
+		filter: grayscale(4);
 	}
 	
-	/*......................................................Modal.....................................................*/
+/*..........................................................Modal......................................................*/
 	.modalDialog {
 		position: fixed;
 		top: 0;
