@@ -24,7 +24,7 @@
 				clearInterval(frame);
 			}
 			else{
-				//decriment each item by entered numbers
+				//increment each item by entered numbers
 				rightPosition+=12;
 
 				//get stored element and concatenate into px measurment

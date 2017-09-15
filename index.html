@@ -94,7 +94,6 @@
 			overflow:hidden; /* hides content until shown by animation */
 			white-space: nowrap;
 			width: 6ch;
-			animation: lineOneTyping 2s steps(6);
 		}
 			
 		h2 {
@@ -110,13 +109,8 @@
 				blinkingTwo .75s step-end infinite;
 		}
 
-		/*h1 animation*/
+		
 		/*animations reference https://www.youtube.com/watch?v=pM_Xy-8dpwI*/
-		@keyframes lineOneTyping {
-  			0%{ width: 0ch }
-  			100% { width: 6ch }
-		}
-
 		/*h2 animation*/
 		@keyframes lineTwoTyping {
 		  	0% { width: 0ch }
@@ -125,10 +119,6 @@
 		}
 
 		/* The typewriter cursor effect */
-		@keyframes blinkingOne {
-		 	from, to { border-color: #2c2f3e; }
-		 	50% {border: none;}
-		}
 		@keyframes blinkingTwo {
 		 	from, to { border-color: transparent; }
 		 	50% {border-color: #2c2f3e;}
