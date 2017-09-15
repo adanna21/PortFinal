@@ -183,7 +183,7 @@
 				</div>
 			</div>
 			<div id="expand3" class="expand">
-				<div class="project_hero" id="calc_imgs"><a href="http://adanna-matrix-calc.bitballoon.com">Matrix Calculator Project</a></div>
+				<div class="project_hero" id="calc_imgs"><a href="http://adanna-matrix-calc.bitballoon.com">Matrix Calculator Project</div>
 				<div class="project_body">
 					<p class="project_p">
 						The project scope was to create a functional calculator with javascript. The complication was adding a button that could provide the average of a series of numbers.<br><br>
@@ -218,7 +218,34 @@
 	<script type="text/javascript">
 
 
+// ..............................................Projects Page Screen Transitions.........................................
+		
+		function projectPageSlide(){
+			let images = document.getElementsByClassName("project_hero");
+			let i;
 
+			//to change all image sizes at once create a loop to target each image in the class array
+			for (i = 0; i < images.length; i++){ 
+			    images[i].classList.toggle('active');} //grab idex of each image and toggle to active class
+			
+			//toggle below ids by creating or removing active class 
+			document.getElementById('project_rightside').classList.toggle('active');
+			// document.getElementsByClassName('project_body').classList.toggle('active');
+			// document.getElementsByClassName('project_p').classList.toggle('active');
+			document.getElementById('project_h1').classList.toggle('active');
+			document.getElementById('project_nav').classList.toggle('active');
+
+
+			let body = document.getElementsByClassName("project_body");
+			let oneImg = document.getElementById('frogger_imgs');
+			let j;
+
+			if(oneImg.style.height = "50vh"){
+				//to change all image sizes at once create a loop to target each image in the class array
+				for (j = 0; j < body.length; j++){ 
+			    body[j].style.display = "block";} //grab idex of each image and toggle to active class
+			}else {body[j].style.display = "none";}		
+		}  
 		
 
 // ...........................................Project Page Image Slideshows.............................................
