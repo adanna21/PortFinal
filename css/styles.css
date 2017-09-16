@@ -281,10 +281,8 @@
 		background-position: top;
 		width: 500px;
 		height: 200px;
-		box-shadow: inset 0px 0px 80px #374E66;
 		float: left;
 		margin: 21% 0 0 15%; 
-		opacity: .7;
 		filter: grayscale(4);
 	}
 	
